@@ -5,15 +5,48 @@
         <!-- UPDATES -->
         <div class="col-md-3" style="padding-left: 2%;">
           <h3 style="text-align: center;" >Updates</h3>
-            <div ng-repeat="x in updates" >
-              <div class="well">
-                {{x}}
-              </div>
-            </div>
-        </div>
+            <flex-slider slide="s in updates" direction="vertical" animation="fade" control-nav="false" direction-nav="false">
+              <li>
+                  {{s}};
+              </li>
+              </flex-slider>
+            <flex-slider slide="s in updates" start-at="1" direction="vertical" animation="fade" control-nav="false" direction-nav="false">
+              <li>
+                  {{s}};
+              </li>
+              </flex-slider>
+            
+            <flex-slider slide="s in updates" start-at="2" direction="vertical" control-nav="false" direction-nav="false">
+              <li>
+                  {{s}};
+              </li>
+            </flex-slider>
+            <flex-slider slide="s in updates" start-at="3" direction="vertical" animation="fade" control-nav="false" direction-nav="false">
+              <li>
+                  {{s}};
+              </li>
+            </flex-slider>
+          </div>
         <!--  Display Result -->
         <div class="col-md-9">
           <h3 style="text-align: center;" >Event Results</h3>
+          
+          <div class="row" ng-controller="r1Controller">
+          <div class="col-md-3">
+            <div class="panel panel-default">
+               <div class="panel-heading">
+                  <h2 class="panel-title"><b>{{eventname}}</b></h2><h5>{{details[0].position}}</h5>
+               </div>
+               <div class="panel-body">
+              <flex-slider slide="s in details[0].data"  end="chooseNext()" direction="vertical" animation="fade" control-nav="false" direction-nav="false">
+                <li>
+                  {{s}}
+                </li>
+            </flex-slider>
+          </div>
+          </div>
+          </div>
+        </div>
         </div>
       </div>
   </div>

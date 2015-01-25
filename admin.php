@@ -3,19 +3,21 @@
 
   <div class="scrollable-content">
     <div id="content">
-
+    <a href="#">back</a>
 <div class="row">
     <div class="col-md-2"></div>
     <div class="col-md-8">
+       <div ng-controller="Updater">
         <form > 
-            <textarea rows="3" id ="update" class="form-control" placeholder="Enter any updates ..."></textarea>
+            <textarea rows="3" id ="update" class="form-control" placeholder="Enter any updates ..." ng-model="updateData"></textarea>
             <br>
-            <button type="submit" class="btn btn-primary">Update</button></div>
+            <button type="submit" ng-click="addUpdate()" class="btn btn-primary">Update</button>
         </form>
+        </div>
+      </div>
     <div class="col-md-2"></div>
 </div>
 <div class="col-md-2"></div>
-</div>
 
 <div class="row">
     <div class="col-md-2"></div>
